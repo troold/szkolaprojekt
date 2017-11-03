@@ -1,0 +1,44 @@
+.btn{
+	cursor: pointer;
+}
+
+.content{
+
+}
+
+.content .option{
+    background-color: orange;
+    text-align: center;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+.inner-form{
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    background: green;
+    width: 60%;
+    padding: 10px;
+    height: 118px;
+    cursor: initial;
+    top: 32px;
+}
+
+.inner-form .input-field{
+    display: flex;
+    width: 70%;
+    height: auto;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.inner-form .input-field .login-credentials{
+	width: 60%;
+}
+
+.inner-form .submit-field{
+	align-self: flex-end;
+}

@@ -1,0 +1,15 @@
+{
+    "name": "dframe/dframe-demo",
+    "description": "Demo application dframe",
+    "license": "MIT",
+    "keywords": ["dframe", "demo", "framework"],
+    "type": "project",
+    "autoload": {
+        "psr-4": {"": "app/"}
+    },
+    
+    "require": {
+        "dframe/dframe": "dev-master",
+        "dframe/database": "^1.1.0"
+    }
+}

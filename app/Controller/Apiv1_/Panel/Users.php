@@ -1,9 +1,9 @@
 <?php
-namespace Controller\apiv1;
+namespace Controller\Apiv1\Panel;
 use Dframe\Controller;
 use Dframe\Config;
 
-abstract class AbstractPanelController extends Controller {
+class UsersController extends Controller {
     /** 
      * Dynamiczny loader stron wykrywa akcje jako plik i stara sie go za ładować
      */

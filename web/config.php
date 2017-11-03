@@ -38,6 +38,6 @@ if(isset($_SERVER['REMOTE_ADDR']) AND ($_SERVER['REMOTE_ADDR'] == '127.0.0.1' OR
 
 # Database configuration
 define('DB_HOST', "bbb"); # Database Host (localhost)
-define('DB_USER', "bbb"); # Database Username
+define('DB_USER', "bddbb"); # Database Username
 define('DB_PASS', "bbb"); # Database Password
 define('DB_DATABASE', "bbb"); # Databese Name

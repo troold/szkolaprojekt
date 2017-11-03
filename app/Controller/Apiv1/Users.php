@@ -1,5 +1,5 @@
 <?php
-namespace Controller\apiv1;
+namespace Controller\Apiv1;
 use Dframe\Controller;
 use Dframe\Config;
 

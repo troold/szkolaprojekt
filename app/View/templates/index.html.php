@@ -11,13 +11,13 @@
 							<span>Zaloguj</span>
 							<div class="inner-form" id="slide" style="display: none;">
 								<div class="input-field" style="display: none">
-									<span>Login</span><input type="text" name="login" class="login-credentials">
+									<span>Login</span><input id="loginField" type="text" name="login" class="login-credentials">
 								</div>
 								<div class="input-field" style="display: none">
-									<span>Hasło</span><input type="text" name="password" class="login-credentials">
+									<span>Hasło</span><input id="passwdField" type="text" name="password" class="login-credentials">
 								</div>
 								<div class="submit-field" style="display: none">
-									<button>Zaloguj</button>
+									<button class="submit-button">Zaloguj</button>
 								</div>
 							</div>
 						</div>
@@ -38,20 +38,10 @@
 <!-- /.content-wrapper -->
 
 <script type="text/javascript">
-	var animateRunning = false;
-	$.ajax({
-        url: '{$router->makeUrl("apiv1,users/login")}',
-        type: "POST",
-        data: {
-        	login: 'testlogin',
-        	haslo: 'testhaslo'
-        },
-        success: function success(response) {
-        	console.log(response);
-        }
-    });
-	$('.login').click(function(){
-		if(!animateRunning){
+	var animateRunning = false;	
+
+	$('.login').click(function(e){
+		if(!animateRunning && $(e.target).hasClass('login')){
 			animateRunning = true;
 			if($('.inner-form').css('display') == 'none'){
 				$(this).animate({
@@ -80,6 +70,32 @@
 			}
 		}
 	});
+
+	$('.submit-button').click(function(){
+		console.log('submit')
+		console.log($('#loginField').val())
+		console.log($('#passwdField').val())
+		if($('#loginField').val().length > 0 && $('#passwdField').val().length > 0){
+			let username = $('#loginField').val();
+			let pass = $('#passwdField').val();
+			login(username,pass);
+			console.log('finished')
+		}
+	});
+
+	function login(login, passwd){
+		$.ajax({
+	        url: '{$router->makeUrl("apiv1,users/login")}',
+	        type: "POST",
+	        data: {
+	        	login: login,
+	        	password: passwd
+	        },
+	        success: function success(response) {
+	        	console.log(response);
+	        }
+	    });
+	}
 </script>
 
 {include file="footer.html.php"}

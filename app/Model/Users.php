@@ -10,7 +10,7 @@ class UsersModel extends \Model\Model
 
     public function login($login, $password){
 
-        $row = $this->baseClass->db->pdoQuery('SELECT * FROM users WHERE login = ? AND (password = ? OR password = ?)', array($email, md5($password.SALT), md5($password)))->result();
+        $row = $this->baseClass->db->pdoQuery('SELECT * FROM users WHERE login = ? AND (password = ? OR password = ?)', array($login, md5($password.SALT), md5($password)))->result();
 
         if(isset($row['id'])){
             if($row['confirmed'] == 0)

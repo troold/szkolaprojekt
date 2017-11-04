@@ -12,9 +12,8 @@ class UsersController extends Controller {
 	public function login() {
 		$userModel = $this->loadModel('Users');
 		$view = $this->loadView('Index');
-
+        
         if(isset($_POST) AND !empty($_POST)){
-
             $return = $userModel->login($_POST['login'], $_POST['password']);
             if($return['return'] == true){
                $this->baseClass->session->register();

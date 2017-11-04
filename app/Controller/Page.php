@@ -31,7 +31,7 @@ class PageController extends Controller
         $view = $this->loadView('Index');
 
         $view->assign('contents', 'Example assign');
-        return $view->render('index');
+        return $view->render('panel/user/index');
 
     }
 }

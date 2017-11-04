@@ -94,7 +94,7 @@
 	        success: function success(response) {
 	        	console.log(response);
 	        	if(response.return == 1)
-	        		window.location="page/index.html.php";
+	        		window.location="panel,page/index";
 	        }
 	    });
 	}

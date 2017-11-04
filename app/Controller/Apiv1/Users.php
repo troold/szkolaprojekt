@@ -12,12 +12,14 @@ class UsersController extends Controller {
 	public function login() {
 		$userModel = $this->loadModel('Users');
 		$view = $this->loadView('Index');
-        
+
         if(isset($_POST) AND !empty($_POST)){
             $return = $userModel->login($_POST['login'], $_POST['password']);
+            var_dump($return);
+            die();
             if($return['return'] == true){
                $this->baseClass->session->register();
-               $this->baseClass->session->set('id', $return['id']);
+               $this->baseClass->session->set('id', $return['user_id']);
 
                return $view->renderJSON(array('return' => '1'));
                

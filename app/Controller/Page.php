@@ -20,8 +20,7 @@ class PageController extends Controller
         $patchController = $smartyConfig->get('setTemplateDir', APP_DIR.'View/templates').'/page/'.htmlspecialchars($_GET['action']).$smartyConfig->get('fileExtension', '.html.php');
         
         if(!file_exists($patchController)){
-        	$this->router->redirect('page/index');
-        	return;
+        	return $this->router->redirect('page/index');
         }
         
         return $view->render('page/'.htmlspecialchars($_GET['action']));

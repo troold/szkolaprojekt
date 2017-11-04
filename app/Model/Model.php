@@ -19,7 +19,7 @@ abstract class Model extends \Dframe\Model {
         return $row['count'];
     }
 
-    public function get($start, $limit, $whereObject, $order = 'id', $sort = 'DESC'){
+    public function get($start, $limit, $whereObject, $order = 'user_id', $sort = 'DESC'){
 
         $query = $this->baseClass->db->prepareQuery("SELECT * FROM `$this->tableName`");
         $query->prepareWhere($whereObject);

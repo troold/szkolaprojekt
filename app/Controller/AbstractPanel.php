@@ -10,9 +10,9 @@ abstract class AbstractPanelController extends Controller {
     public function start(){
 
         if(authLogin() != true)
-            return $this->baseClass->msg('e', 'Nie jestes zalogowany','{$router->publicWeb()');
+            return $this->baseClass->msg('e', 'Nie jestes zalogowany','{$router->publicWeb(View/index.php)');
 
-        $this->baseClass->msg('s', 'Success Message!','{$router->publicWeb()');
+        $this->baseClass->msg('s', 'Success Message!','{$router->publicWeb(View/index.php)');
     }
 
 }

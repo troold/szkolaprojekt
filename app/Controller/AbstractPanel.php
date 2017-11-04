@@ -7,7 +7,7 @@ abstract class AbstractPanelController extends Controller {
     /** 
      * Dynamiczny loader stron wykrywa akcje jako plik i stara sie go za ładować
      */
-    public function init(){
+    public function start(){
         var_dump('ABSTRACT START');
         die();
         if($this->baseClass->session->authLogin() != true)

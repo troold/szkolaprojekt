@@ -7,7 +7,7 @@
 			<section class="col-md-12 content">
 				<div class="row">
 					<div class="col-md-6 col-md-push-3">
-						panel/index.html.pl
+						panel/index
 					</div>
 				</div>
 			</section>

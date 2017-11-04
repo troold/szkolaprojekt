@@ -2,7 +2,7 @@
 namespace Controller\Panel;
 use Dframe\Config;
 
-class UsersController extends \Controller\AbstractPanelController {
+class PageController extends \Controller\AbstractPanelController {
     /** 
      * Dynamiczny loader stron wykrywa akcje jako plik i stara sie go za ładować
      */

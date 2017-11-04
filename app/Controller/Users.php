@@ -30,6 +30,27 @@ class UsersController extends Controller {
         
         return $view->renderJSON(array('return' => '0', 'response' => 'Niepoprawne parametry'));
 	}
+
+    public function register() {
+        $userModel = $this->loadModel('Users');
+        $view = $this->loadView('Index');
+
+        if(isset($_POST) AND !empty($_POST)){
+            $return = $userModel->register($_POST['login'], $_POST['password'], $_POST['firstname'], $_POST['surname'], $_POST['email'], $_POST['town']);
+
+            var_dump($return);
+            die();
+
+               return $view->renderJSON(array('return' => '1'));
+               
+            }elseif($return['return'] == false AND isset($return['response'])){
+                return $view->renderJSON(array('return' => '0', 'response' => 'wystapil bład'));
+            }
+
+        } 
+        
+        return $view->renderJSON(array('return' => '0', 'response' => 'Niepoprawne parametry'));
+    }
  
 	public function logout(){
         $this->baseClass->session->end();

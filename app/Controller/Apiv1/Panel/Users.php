@@ -12,7 +12,7 @@ class UsersController extends \Controller\Apiv1\AbstractPanel {
     	$method = $_SERVER['REQUEST_METHOD'];
     	$userModel = $this->loadModel('Users');
     	$view = $this->loadView('Index');
-    	$data = $userModel->one($_GET['userId']);
+    	$data = $userModel->one();
 
         switch ($method) {
         case 'POST':  
@@ -21,7 +21,12 @@ class UsersController extends \Controller\Apiv1\AbstractPanel {
         case 'GET':
         		$return = array(
         		'user_id' => $data['user_id'],
-        		'username' => $data['login']
+                'username' => $data['login'],
+                'email' => $data['email'],
+                'firstname' => $data['name'],
+                'surname' => $data['surname'],
+                'town' => $data['town'],
+        		'points' => $data['points']
         		);
             	return $view->renderJSON(array('return' => '1', 'response' => $return));
             break;

@@ -2,3 +2,9 @@
 2017-11-04 10:11:41 :: SELECT * FROM users WHERE login = "admin" AND (password = "ea80e662ab2522943873f746de663897" OR password = "0192023a7bbd73250516f069df18b500")
 2017-11-04 10:11:04 :: SELECT * FROM users WHERE login = "admin" AND (password = "ea80e662ab2522943873f746de663897" OR password = "0192023a7bbd73250516f069df18b500")
 2017-11-04 02:11:15 :: SELECT * FROM users WHERE user_id = "1"
+2017-11-04 03:11:10 :: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound: 392
+2017-11-04 03:11:10 :: SELECT * FROM users WHERE user_id = 
+2017-11-04 03:11:15 :: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound: 392
+2017-11-04 03:11:15 :: SELECT * FROM users WHERE user_id = 
+2017-11-04 03:11:58 :: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound: 392
+2017-11-04 03:11:58 :: SELECT * FROM users WHERE user_id = 

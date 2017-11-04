@@ -18,4 +18,13 @@ class UsersModel extends \Model\Model
         return $this->methodResult(false, array('response' => 'Niepoprawne dane do logowania!'));
         
     }
+
+    public function one($userId){
+    	$row = $this->baseClass->db->pdoQuery('SELECT * FROM users WHERE user_id = ?', array($userId))->result();
+
+        if(isset($row['user_id']))          
+            return $this->methodResult(true, $row);        
+            
+        return $this->methodResult(false, array('response' => 'Niepoprawne id użytkownika'));
+    }
 }

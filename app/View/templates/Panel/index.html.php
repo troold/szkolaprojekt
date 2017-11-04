@@ -19,7 +19,16 @@
 <!-- /.content-wrapper -->
 
 <script type="text/javascript">
-	
+	$.ajax({
+        url: '{$router->makeUrl("apiv1,panel,users/one")}',
+        type: "GET",
+        data:{
+        	userId: '1'
+        },
+        success: function success(response) {
+        	console.log(response);
+        }
+    });
 </script>
 
 {include file="footer.html.php"}

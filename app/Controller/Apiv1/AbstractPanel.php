@@ -3,7 +3,7 @@ namespace Controller\Apiv1;
 use Dframe\Controller;
 use Dframe\Config;
 
-abstract class AbstractPanelController extends Controller {
+abstract class AbstractPanel extends Controller {
     /** 
      * Dynamiczny loader stron wykrywa akcje jako plik i stara sie go za ładować
      */

@@ -8,12 +8,12 @@ abstract class AbstractPanelController extends Controller {
      * Dynamiczny loader stron wykrywa akcje jako plik i stara sie go za ładować
      */
     public function start(){
-        var_dump('ABSTRACT START');
-        die();
-        if($this->baseClass->session->authLogin() != true)
-            return $this->baseClass->msg('e', 'Nie jestes zalogowany','index');
 
-        $this->baseClass->msg('s', 'Success Message!','page/index');
+        if($this->baseClass->session->authLogin() != true){
+            return $this->baseClass->msg('e', 'Nie jestes zalogowany','page/index');
+        }
+
+        $this->baseClass->msg('s', 'Success Message!','panel/index');
 
     }
 

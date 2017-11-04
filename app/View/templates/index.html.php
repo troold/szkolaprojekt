@@ -7,26 +7,7 @@
 			<section class="col-md-12 content">
 				<div class="row">
 					<div class="col-md-6 col-md-push-3">
-						<div class="option btn login">
-							<span>Zaloguj</span>
-							<div class="inner-form" id="slide" style="display: none;">
-								<div class="input-field" style="display: none">
-									<span>Login</span><input id="loginField" type="text" name="login" class="login-credentials">
-								</div>
-								<div class="input-field" style="display: none">
-									<span>Hasło</span><input id="passwdField" type="text" name="password" class="login-credentials">
-								</div>
-								<div class="submit-field" style="display: none">
-									<button class="submit-button">Zaloguj</button>
-								</div>
-							</div>
-						</div>
-						<div class="option btn register">
-							<span>Zarejestruj</span>
-						</div>
-						<div class="option btn">
-							<span>Informacje</span>
-						</div>
+						panel/index
 					</div>
 				</div>
 			</section>

@@ -2,13 +2,13 @@
 namespace Controller\Panel;
 use Dframe\Config;
 
-class UsersController extends \Controller\AbstractPanel {
+class UsersController extends \Controller\AbstractPanelController { 
     /** 
      * Dynamiczny loader stron wykrywa akcje jako plik i stara sie go za ładować
      */
 
     public function one(){
-        $view->loadView('index');
+        $view = $this->loadView('index');
 		return Response::create($view->fetch('panel/user/one')));
     }
 }

@@ -8,7 +8,7 @@ class UsersController extends \Controller\AbstractPanel {
      */
 
     public function index(){
-        $view->render('panel/page/index');
-		return Response::create($view->fetch('panel/user/one')));
+    	$view = $this->loadView('index');
+		return Response::create($view->fetch('panel/index')));
     }
 }

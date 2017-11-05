@@ -8,56 +8,59 @@
 				<div class="row">
 					<div class="col-md-6 col-md-push-3">
 						<div class="option btn login">
-							<span>Zaloguj</span>
-							<div class="inner-form login-form" action="" id="slideLogin" style="display: none;">
-								<div class="input-field" style="display: none">
-									<div class="input-text"><span>Login</span></div>
-									<div class="input-data"><input id="loginField" type="text" name="login" class="login-credentials"></div>
-								</div>
-								<div class="input-field" style="display: none">
-									<div class="input-text"><span>Hasło</span></div>
-									<div class="input-data"><input id="passwdField" type="password" name="password" class="login-credentials"></div>
-								</div>
-								<div class="submit-field" style="display: none">
-									<button class="submit-button" data-type="login">Zaloguj</button>
-								</div>
+							<span>Zaloguj</span>							
+						</div>
+						<div class="col-xs-12 option-list login-form" action="" id="slideLogin">
+							<div class="input-field" style="display: none">
+								<div class="input-text"><span>Login</span></div>
+								<div class="input-data"><input id="loginField" type="text" name="login" class="login-credentials"></div>
+							</div>
+							<div class="input-field" style="display: none">
+								<div class="input-text"><span>Hasło</span></div>
+								<div class="input-data"><input id="passwdField" type="password" name="password" class="login-credentials"></div>
+							</div>
+							<div class="submit-field" style="display: none">
+								<button class="submit-button" data-type="login">Zaloguj</button>
 							</div>
 						</div>
 						<div class="option btn register">
-							<span>Zarejestruj</span>
-							<div class="inner-form register-form" action="" id="slideRegister" style="display: none;">
-								<div class="input-field" style="display: none">
-									<div class="input-text"><span>Login</span></div>
-									<div class="input-data"><input id="loginFieldR" type="text" name="login" class="register-credentials" placeholder="Nazwa użytkownika"></div>
-								</div>
-								<div class="input-field" style="display: none">
-									<div class="input-text"><span>Hasło</span></div>
-									<div class="input-data"><input id="passwdFieldR" type="password" name="password" class="register-credentials" placeholder="Hasło">
-									<input id="repeatPasswdFieldR" type="password" name="password" class="register-credentials" placeholder="Potwórz hasło"></div>
-								</div>
-								<div class="input-field" style="display: none">
-									<div class="input-text"><span>Email</span></div>
-									<div class="input-data"><input id="emailField" type="text" name="login" class="register-credentials" placeholder="Twój email"></div>
-								</div>
-								<div class="input-field" style="display: none">
-									<div class="input-text"><span>Imię</span></div>
-									<div class="input-data"><input id="nameField" type="text" name="login" class="register-credentials" placeholder="Twoje imię"></div>
-								</div>
-								<div class="input-field" style="display: none">
-									<div class="input-text"><span>Nazwisko</span></div>
-									<div class="input-data"><input id="surnameField" type="text" name="login" class="register-credentials" placeholder="Twoje nazwisko"></div>
-								</div>
-								<div class="input-field" style="display: none">
-									<div class="input-text"><span>Miasto</span></div>
-									<div class="input-data"><input id="townField" type="text" name="login" class="register-credentials" placeholder="Miasto zamieszkania"></div>
-								</div>
-								<div class="submit-field" style="display: none">
-									<button class="submit-button" data-type="register">Zarejestruj</button>
-								</div>
+							<span>Zarejestruj</span>							
+						</div>
+						<div class="col-xs-12 option-list register-form" action="" id="slideRegister">
+							<div class="input-field" style="display: none">
+								<div class="input-text"><span>Login</span></div>
+								<div class="input-data"><input id="loginFieldR" type="text" name="login" class="register-credentials" placeholder="Nazwa użytkownika"></div>
+							</div>
+							<div class="input-field" style="display: none">
+								<div class="input-text"><span>Hasło</span></div>
+								<div class="input-data"><input id="passwdFieldR" type="password" name="password" class="register-credentials" placeholder="Hasło">
+								<input id="repeatPasswdFieldR" type="password" name="password" class="register-credentials" placeholder="Potwórz hasło"></div>
+							</div>
+							<div class="input-field" style="display: none">
+								<div class="input-text"><span>Email</span></div>
+								<div class="input-data"><input id="emailField" type="text" name="login" class="register-credentials" placeholder="Twój email"></div>
+							</div>
+							<div class="input-field" style="display: none">
+								<div class="input-text"><span>Imię</span></div>
+								<div class="input-data"><input id="nameField" type="text" name="login" class="register-credentials" placeholder="Twoje imię"></div>
+							</div>
+							<div class="input-field" style="display: none">
+								<div class="input-text"><span>Nazwisko</span></div>
+								<div class="input-data"><input id="surnameField" type="text" name="login" class="register-credentials" placeholder="Twoje nazwisko"></div>
+							</div>
+							<div class="input-field" style="display: none">
+								<div class="input-text"><span>Miasto</span></div>
+								<div class="input-data"><input id="townField" type="text" name="login" class="register-credentials" placeholder="Miasto zamieszkania"></div>
+							</div>
+							<div class="submit-field" style="display: none">
+								<button class="submit-button" data-type="register">Zarejestruj</button>
 							</div>
 						</div>
-						<div class="option btn">
+						<div class="option btn information">
 							<span>Informacje</span>
+						</div>
+						<div id="slideInfo" class="col-xs-12 option-list information-content">
+							<span class="content" style="display: none">Strona została przygotowana przez studenta Jakuba Kubika w&nbsp;ramach zadanego projektu.</span>
 						</div>
 					</div>
 				</div>
@@ -73,102 +76,130 @@
 	var animateRunning = false;
 	var loginFormOpened = false;
 	var registerFormOpened = false;
+	var informationOpened = false;
+
+	$('.information').click(function(e){
+		if($(e.target).is('span'))
+			e.target = $(e.target).parent()[0];
+
+		if(!animateRunning && $(e.target).hasClass('information')){
+			animateRunning = true;
+			if(!informationOpened){
+				toggleInfo(true);
+			}else{
+				toggleInfo(false);
+			}
+		}
+	});
 
 	$('.login').click(function(e){
+		if($(e.target).is('span'))
+			e.target = $(e.target).parent()[0];
+
 		if(!animateRunning && $(e.target).hasClass('login')){
 			animateRunning = true;
-			if($(e.target).find('.inner-form').css('display') == 'none'){
+			if(!loginFormOpened){
 				if(!registerFormOpened){
-					toggleLogin(this, e.target, true);
+					toggleLogin(true);
 				}else{
-					toggleRegister($('.register'), e.target, false);
+					toggleRegister(false);
 					setTimeout(function(){
-						toggleLogin($('.login'), e.target, true);
+						toggleLogin(true);
 					}, 500)
 				}
 			}else{
-				toggleLogin(this, e.target, false);
+				toggleLogin(false);
 			}
 		}
 	});
 
 	$('.register').click(function(e){
+		if($(e.target).is('span'))
+			e.target = $(e.target).parent()[0];
+
 		if(!animateRunning && $(e.target).hasClass('register')){
 			animateRunning = true;
-			if($(e.target).find('.inner-form').css('display') == 'none'){
+			if(!registerFormOpened){
 				if(!loginFormOpened){
-					toggleRegister(this, e.target, true);
+					toggleRegister(true);
 				}else{
-					toggleLogin($('.login'), e.target, false);					
+					toggleLogin(false);					
 					setTimeout(function(){
-						toggleRegister($('.register'), e.target, true);
+						toggleRegister(true);
 					}, 500)
 				}
 			}else{
-				toggleRegister(this, e.target, false);
+				toggleRegister(false);
 			}
 		}
 	});
 
-	function toggleLogin(that, target, toggle){
+	function toggleLogin(toggle){
+		var target = $('.login-form')[0];
 		if(toggle){
-			$(that).animate({
-				marginBottom: '+=120'
-			}, 500);
-		    $('#slideLogin').slideDown({
-		    	duration: 500,
-		    	complete: function(){
-		    		$(target).find('.input-field').css('display', 'flex');
-		    		$(target).find('.submit-field').css('display', 'flex');
-		    		animateRunning = false;
-		    		loginFormOpened = true;
-		    	}
-		    });
+		    $('#slideLogin').animate({
+		    	height: '+=145'
+		    },500, function(){
+		    	$(target).find('.input-field').css('display', 'flex');
+    			$(target).find('.submit-field').css('display', 'flex');
+	    		animateRunning = false;
+	    		loginFormOpened = true;
+	    	});
 		}else{
 			$(target).find('.input-field').css('display', 'none');
     		$(target).find('.submit-field').css('display', 'none');
-			$(that).animate({
-				marginBottom: '-=120'
-			}, 500);
-		    $('#slideLogin').slideUp({
-		    	duration: 500,
-		    	complete: function(){
-		    		animateRunning = false;
-		    		loginFormOpened = false;
-		    	}
-		    });
+		    $('#slideLogin').animate({
+		    	height: '-=145'
+		    },500, function(){
+	    		animateRunning = false;
+	    		loginFormOpened = false;
+	    	});
 		}
 	}
 
-	function toggleRegister(that, target, toggle){
+	function toggleRegister(toggle){
+		var target = $('.register-form')[0];
 		if(toggle){
-			$(that).animate({
-				marginBottom: '+=270'
-			}, 500);
-		    $('#slideRegister').slideDown({
-		    	duration: 500,
-		    	complete: function(){
-		    		$(target).find('.input-field').css('display', 'flex');
-		    		$(target).find('.submit-field').css('display', 'flex');
-		    		animateRunning = false;
-		    		registerFormOpened = true;
-		    	}
-		    });
+		    $('#slideRegister').animate({
+		    	height: '+=325'
+		    },500, function(){
+		    	$(target).find('.input-field').css('display', 'flex');
+    			$(target).find('.submit-field').css('display', 'flex');
+	    		animateRunning = false;
+	    		registerFormOpened = true;
+	    	});
 		}else{
 			$(target).find('.input-field').css('display', 'none');
     		$(target).find('.submit-field').css('display', 'none');
-			$(that).animate({
-				marginBottom: '-=270'
-			}, 500);
-		    $('#slideRegister').slideUp({
-		    	duration: 500,
-		    	complete: function(){
-		    		animateRunning = false;
-		    		registerFormOpened = false;
-		    	}
-		    });
+			$('#slideRegister').animate({
+		    	height: '-=325'
+		    },500, function(){
+	    		animateRunning = false;
+	    		registerFormOpened = false;
+	    	});
 		}
-	}	
+	}
+
+	function toggleInfo(toggle){
+		var target = $('.information-content')[0];
+		if(toggle){
+			$('#slideInfo').animate({
+				height: '+=120'
+			}, 500, function(){
+				$(target).find('.content').css('display', 'flex');
+				animateRunning = false;
+				informationOpened = true;
+			});
+		}else{
+			$(target).find('.content').css('display', 'none');
+			$('#slideInfo').animate({
+				height: '-=120'
+			}, 500, function(){				
+				animateRunning = false;
+				informationOpened = false;
+			});
+		}
+	}
 
 	$('.submit-field').click(function(){
 		if($(this).find('button').attr('data-type') == 'login'){
@@ -205,7 +236,7 @@
 					targetArray.push($(data).val());
 				});
 
-				handleUser(targetArray);
+				handleUser(targetArray, 'login');
 				console.log('finished')
 				return false;
 			}			

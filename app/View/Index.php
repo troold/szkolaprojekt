@@ -1,9 +1,11 @@
 <?php
 namespace View;
+use Dframe\Asset\Assetic;
 
 class indexView extends \View\View
 {
     public function init(){
+        $this->router->assetic = new Assetic();
         $this->assign('router', $this->router);
 
         /* Domyślne alerty */

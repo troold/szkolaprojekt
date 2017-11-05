@@ -8,6 +8,7 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
   <script src='{$router->publicWeb("bower_components/jquery/dist/jquery.min.js")}'></script>
+  <script src="{$router->assetic->assetJs('userdata.js')}"></script>
   
 
   <!-- Bootstrap 3.3.7 -->
@@ -40,19 +41,19 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="../../index2.html" class="navbar-brand"><b>Admin</b>LTE</a>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+          <a href="../panel,page/index" class="navbar-brand"><b>Projekt</b> J.Kubik</a>
+<!--           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
-          </button>
+          </button> -->
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+<!--         <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
             <li><a href="#">Link</a></li>
           </ul>
-        </div>
+        </div> -->
         <!-- /.navbar-collapse -->
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
@@ -74,7 +75,7 @@
                 <li class="user-body">
                   <div class="row">
                     <div class="col-xs-12 text-center">
-                      <a href="#">Edytuj Profil</a>
+                      <a href="../panel,users/one">Edytuj Profil</a>
                     </div>
                   </div>
                   <!-- /.row -->
@@ -82,7 +83,7 @@
                 <!-- Menu Footer-->
                 <li class="user-footer">
                   <div class="pull-left">
-                    <a href="#" class="btn btn-default btn-flat">Profil</a>
+                    <a href="../panel,users/index" class="btn btn-default btn-flat">Profil</a>
                   </div>
                   <div class="pull-right">
                     <a href="#" class="btn btn-default btn-flat">Wyloguj</a>

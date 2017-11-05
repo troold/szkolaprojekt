@@ -40,20 +40,20 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="../../index2.html" class="navbar-brand"><b>Admin</b>LTE</a>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+          <a href="#" class="navbar-brand"><b>Projekt</b> J.Kubik</a>
+<!--           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
-          </button>
+          </button> -->
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+<!--         <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
             <li><a href="#">Link</a></li>
           </ul>
         </div>
-      </div>
+      </div> -->
       <!-- /.container-fluid -->
     </nav>
   </header>

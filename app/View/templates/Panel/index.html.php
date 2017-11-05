@@ -10,8 +10,8 @@
 							<span>Lista gier</span>
 						</div>
 						<div class="option-list">
-							<ul>
-								<ul><a href="#">Pong</a></ul>
+							<ul class="--list">
+								<ul><a href="../panel,users/pong">Pong</a></ul>
 								<ul>Clicker</ul>
 								<ul>Matcher</ul>
 							</ul>

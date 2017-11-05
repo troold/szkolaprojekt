@@ -1,4 +1,4 @@
-{include file="header.html.php"}
+{include file="Panel/header.html.php"}
 
 
 <div class="content-wrapper">
@@ -19,7 +19,21 @@
 <!-- /.content-wrapper -->
 
 <script type="text/javascript">
-	
+	$(document).ready(function() {
+		$.ajax({
+		    url: '{$router->makeUrl("apiv1,panel,users/one")}',
+		    type: "GET",
+		    success: function success(response) {
+		    	//console.log(response.response);
+		    	if(response.return){
+		    		var userData = response.response;
+		    		console.log(userData)
+		    		$('.username').html(userData.username);
+		    		$('.user-full-name').html(userData.firstname + ' ' + userData.surname);
+		    	}
+		    }
+		});
+	});
 </script>
 
-{include file="footer.html.php"}
+{include file="Panel/footer.html.php"}

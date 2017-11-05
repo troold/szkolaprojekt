@@ -7,14 +7,14 @@
 				<div class="row">
 					<div class="col-md-6 col-md-push-3">
 						<div class="option">
-							<span>Lista gier</span>
+							<span class="option-title">Lista gier</span>
 						</div>
 						<div class="option-list">
-							<ul class="--list">
+							<ol class="--list">
 								<ul><a href="../panel,users/pong">Pong</a></ul>
-								<ul>Clicker</ul>
-								<ul>Matcher</ul>
-							</ul>
+								<ul><a href="#">Clicker</a></ul>
+								<ul><a href="#">Matcher</a></ul>
+							</ol>
 						</div>
 					</div>
 				</div>
@@ -27,21 +27,7 @@
 <!-- /.content-wrapper -->
 
 <script type="text/javascript">
-$(document).ready(function() {
-	$.ajax({
-	    url: '{$router->makeUrl("apiv1,panel,users/one")}',
-	    type: "GET",
-	    success: function success(response) {
-	    	//console.log(response.response);
-	    	if(response.return){
-	    		var userData = response.response;
-	    		console.log(userData)
-	    		$('.username').html(userData.username);
-	    		$('.user-full-name').html(userData.firstname + ' ' + userData.surname);
-	    	}
-	    }
-	});
-});
+
 </script>
 
 {include file="Panel/footer.html.php"}

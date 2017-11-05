@@ -118,7 +118,6 @@ var update = function() {
   }else{
     console.log('koniec')
     clearInterval(timer);
-    return 1;
   }
 };
 

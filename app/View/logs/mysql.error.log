@@ -8,3 +8,17 @@
 2017-11-04 03:11:15 :: SELECT * FROM users WHERE user_id = 
 2017-11-04 03:11:58 :: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound: 392
 2017-11-04 03:11:58 :: SELECT * FROM users WHERE user_id = 
+2017-11-05 05:11:55 :: update statement not in valid format..
+2017-11-05 05:11:55 :: 
+2017-11-05 05:11:32 :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jkubikct_projekt.user' doesn't exist: 702
+2017-11-05 05:11:32 :: UPDATE `user` SET points = "05" WHERE user_id = "1" ;
+2017-11-05 06:11:28 :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens: 702
+2017-11-05 06:11:28 :: UPDATE `users` SET 0 = :s_0 WHERE user_id = "1" ;
+2017-11-05 06:11:49 :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens: 702
+2017-11-05 06:11:49 :: UPDATE `users` SET 0 = :s_0 WHERE user_id = "1" ;
+2017-11-05 06:11:15 :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0 = 'firstname', 1 = 'Kuba' WHERE user_id = '1'' at line 1: 702
+2017-11-05 06:11:15 :: UPDATE `users` SET 0 = :s_0, 1 = :s_1 WHERE user_id = "1" ;
+2017-11-05 06:11:42 :: update statement not in valid format..
+2017-11-05 06:11:42 :: 
+2017-11-05 06:11:59 :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'firstname' in 'field list': 702
+2017-11-05 06:11:59 :: UPDATE `users` SET firstname = "Kuba" WHERE user_id = "1" ;

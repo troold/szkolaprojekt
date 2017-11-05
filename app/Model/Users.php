@@ -19,6 +19,42 @@ class UsersModel extends \Model\Model
         
     }
 
+    public function register($login, $password, $firstname, $surname, $email, $town){
+        $dataArray = array(
+            'login' => $login,
+            'password' => md5($password),
+            'email' => $email,
+            'name' => ucwords($firstname),
+            'surname' => ucwords($surname),
+            'town' => ucwords($town),
+        );
+        if(isset($dataArray)){
+            $insert = $this->baseClass->db->insert('users', $dataArray)->getLastInsertId();
+            return $this->methodResult(true, $dataArray);         
+        }else{
+            return $this->methodResult(false, array('response' => 'Niepoprawne dane do rejestracji!'));     
+        }
+            
+        return $this->methodResult(false, array('response' => 'Niepoprawne dane do rejestracji!'));
+        
+    }
+
+    public function editProfile($array){
+
+        $userId = $_SESSION['id'];
+        $where = array('user_id' => $userId);
+        $update = $this->baseClass->db->update('users', $array, $where)->affectedRows();
+
+        if(isset($array)){
+            $update = $this->baseClass->db->insert('users', $array)->getLastInsertId();
+            return $this->methodResult(true, $array);         
+        }else{
+            return $this->methodResult(false, array('response' => 'Wystąpił błąd!'));     
+        }
+
+        return $this->methodResult(false, array('response' => 'Error'));
+    }
+
     public function getUser($login){
 
         $row = $this->baseClass->db->pdoQuery('SELECT * FROM users WHERE login = ?', array($login))->result();
@@ -41,25 +77,20 @@ class UsersModel extends \Model\Model
         
     }
 
-    public function register($login, $password, $firstname, $surname, $email, $town){
-        $dataArray = array(
-            'login' => $login,
-            'password' => md5($password),
-            'email' => $email,
-            'name' => ucwords($firstname),
-            'surname' => ucwords($surname),
-            'town' => ucwords($town),
-        );
+    public function updateScore($score){
+        $dataArray = array('points'=>$score);
+        $userId = $_SESSION['id'];
+        $where = array('user_id' => $userId);
+        $update = $this->baseClass->db->update('users', $dataArray, $where)->affectedRows();
+
         if(isset($dataArray)){
-            $insert = $this->baseClass->db->insert('users', $dataArray)->getLastInsertId();
-            return $this->methodResult(true, $dataArray); 
-        
+            $update = $this->baseClass->db->insert('users', $dataArray)->getLastInsertId();
+            return $this->methodResult(true, $dataArray);         
         }else{
-            return $this->methodResult(false, array('response' => 'Niepoprawne dane do rejestracji!'));     
+            return $this->methodResult(false, array('response' => 'Wystąpił błąd!'));     
         }
-            
-        return $this->methodResult(false, array('response' => 'Niepoprawne dane do rejestracji!'));
-        
+
+        return $this->methodResult(false, array('response' => 'Error'));
     }
 
     public function one(){

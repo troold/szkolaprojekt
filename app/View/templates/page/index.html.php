@@ -8,9 +8,9 @@
 				<div class="row">
 					<div class="col-md-6 col-md-push-3">
 						<div class="option btn login">
-							<span>Zaloguj</span>							
+							<span class="option-title">Zaloguj</span>							
 						</div>
-						<div class="col-xs-12 option-list login-form" action="" id="slideLogin">
+						<div class="col-xs-12 option-list login-form" id="slideLogin">
 							<div class="input-field" style="display: none">
 								<div class="input-text"><span>Login</span></div>
 								<div class="input-data"><input id="loginField" type="text" name="login" class="login-credentials"></div>
@@ -24,9 +24,9 @@
 							</div>
 						</div>
 						<div class="option btn register">
-							<span>Zarejestruj</span>							
+							<span class="option-title">Zarejestruj</span>							
 						</div>
-						<div class="col-xs-12 option-list register-form" action="" id="slideRegister">
+						<div class="col-xs-12 option-list register-form" id="slideRegister">
 							<div class="input-field" style="display: none">
 								<div class="input-text"><span>Login</span></div>
 								<div class="input-data"><input id="loginFieldR" type="text" name="login" class="register-credentials" placeholder="Nazwa użytkownika"></div>
@@ -38,26 +38,26 @@
 							</div>
 							<div class="input-field" style="display: none">
 								<div class="input-text"><span>Email</span></div>
-								<div class="input-data"><input id="emailField" type="text" name="login" class="register-credentials" placeholder="Twój email"></div>
+								<div class="input-data"><input id="emailField" type="text" name="email" class="register-credentials" placeholder="Twój email"></div>
 							</div>
 							<div class="input-field" style="display: none">
 								<div class="input-text"><span>Imię</span></div>
-								<div class="input-data"><input id="nameField" type="text" name="login" class="register-credentials" placeholder="Twoje imię"></div>
+								<div class="input-data"><input id="nameField" type="text" name="firstname" class="register-credentials" placeholder="Twoje imię"></div>
 							</div>
 							<div class="input-field" style="display: none">
 								<div class="input-text"><span>Nazwisko</span></div>
-								<div class="input-data"><input id="surnameField" type="text" name="login" class="register-credentials" placeholder="Twoje nazwisko"></div>
+								<div class="input-data"><input id="surnameField" type="text" name="surname" class="register-credentials" placeholder="Twoje nazwisko"></div>
 							</div>
 							<div class="input-field" style="display: none">
 								<div class="input-text"><span>Miasto</span></div>
-								<div class="input-data"><input id="townField" type="text" name="login" class="register-credentials" placeholder="Miasto zamieszkania"></div>
+								<div class="input-data"><input id="townField" type="text" name="town" class="register-credentials" placeholder="Miasto zamieszkania"></div>
 							</div>
 							<div class="submit-field" style="display: none">
 								<button class="submit-button" data-type="register">Zarejestruj</button>
 							</div>
 						</div>
 						<div class="option btn information">
-							<span>Informacje</span>
+							<span class="option-title">Informacje</span>
 						</div>
 						<div id="slideInfo" class="col-xs-12 option-list information-content">
 							<span class="content" style="display: none">Strona została przygotowana przez studenta Jakuba Kubika w&nbsp;ramach zadanego projektu.</span>
@@ -290,8 +290,13 @@
 		        },
 		        success: function success(response) {
 		        	console.log(response);
-		        	if(response.return == 1)
-		        		console.log("Pomyślnie zarejestrowano")
+		        	if(response.return == 1){
+		        		console.log("Pomyślnie zarejestrowano");
+		        		toggleRegister(false);
+						setTimeout(function(){
+							toggleLogin(true);
+						}, 500);
+		        	}
 		        }
 		    });
 			}

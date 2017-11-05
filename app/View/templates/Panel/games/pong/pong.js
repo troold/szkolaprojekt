@@ -18,7 +18,7 @@ var dMultiplier = 1;
 var cpuScore = 0;
 var playerScore = 0;
 var scoreLimit = 20;
-var timeLimit = 5;
+var timeLimit = 300;
 var timePassed = 0;
 var timer;
 var gameOver = false;
@@ -112,7 +112,7 @@ Ball.prototype.render = function() {
 };
 
 var update = function() {
-  if(timePassed<timeLimit){
+  if((timePassed<timeLimit) && (playerScore <= scoreLimit) && (cpuScore <= scoreLimit)){
     player.update();
     computer.update(ball);
     ball.update(player.paddle, computer.paddle);
@@ -156,10 +156,10 @@ var update = function() {
 function assignScore(pos){
   console.log(pos)
   if(pos>200){
-    cpuScore+=1*dMultiplier;
+    cpuScore++;
     $('#cpuPoints').html(cpuScore);
   }else{
-    playerScore+=1*dMultiplier;
+    playerScore++;
     $('#playerPoints').html(playerScore);
   }
  }

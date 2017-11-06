@@ -1,7 +1,7 @@
-{include file="Panel/header.html.php"}
+{include file="panel/header.html.php"}
 
 <link rel="stylesheet" href='{$router->publicWeb("libs/css/pong/pong.css")}'>
-<script type="text/javascript">{include file='Panel/games/pong/pong.js'}</script>
+<script type="text/javascript">{include file='panel/games/pong/pong.js'}</script>
 
 <div class="content-wrapper">
 	<div class="container">
@@ -51,4 +51,4 @@
 
 </script>
 
-{include file="Panel/footer.html.php"}
+{include file="panel/footer.html.php"}

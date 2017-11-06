@@ -87,7 +87,7 @@
                     <a href="../panel,users/index" class="btn btn-default btn-flat">Profil</a>
                   </div>
                   <div class="pull-right">
-                    <a href="{$router->makeUrl('user/logout')}" class="btn btn-default btn-flat">Wyloguj</a>
+                    <a href="../apiv1,users/logout" class="btn btn-default btn-flat">Wyloguj</a>
                   </div>
                 </li>
               </ul>

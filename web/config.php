@@ -8,13 +8,13 @@ $debugAllowed = array(
 if(isset($_SERVER['REMOTE_ADDR']) AND in_array($_SERVER['REMOTE_ADDR'], $debugAllowed)) {
     ini_set("display_errors", "on");  # Debug setings
     error_reporting(E_ALL);           # Debug setings
-    define('MOD_REWRITE', false);     # Mod rewrite (ex. task=page&action=login -> page/login )
+    define('MOD_REWRITE', true);     # Mod rewrite (ex. task=page&action=login -> page/login )
     define('setErrorLog', true);      # DB show error
 
 } else {
     ini_set("display_errors", "off"); # Debug setings
     error_reporting(E_ALL);           # Debug setings
-    define('MOD_REWRITE', false);     # Mod rewrite (ex. task=page&action=login -> page/login )
+    define('MOD_REWRITE', true);     # Mod rewrite (ex. task=page&action=login -> page/login )
     define('setErrorLog', false);     # DB show error
 
 }
@@ -37,7 +37,7 @@ if(isset($_SERVER['REMOTE_ADDR']) AND ($_SERVER['REMOTE_ADDR'] == '127.0.0.1' OR
 
 
 # Database configuration
-define('DB_HOST', "bbb"); # Database Host (localhost)
-define('DB_USER', "bbb"); # Database Username
-define('DB_PASS', "bbb"); # Database Password
-define('DB_DATABASE', "bbb"); # Databese Name
+define('DB_HOST', "v2.citycore.pro"); # Database Host (localhost)
+define('DB_USER', "jkubikct_troold"); # Database Username
+define('DB_PASS', "9zL[a_UD#hy]"); # Database Password
+define('DB_DATABASE', "jkubikct_projekt"); # Databese Name

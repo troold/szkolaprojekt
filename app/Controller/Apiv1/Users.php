@@ -113,7 +113,7 @@ class UsersController extends Controller {
         //usuwanie cookie z last page
         unset($_COOKIE['currentPage']);
         setcookie("currentPage", "", time()-3600, "/");
-        return Response::create($view->fetch('page/index'));
+        return $view->renderJSON(array('return' => '1', 'response' => 'Wylogowano'));
 	}
 
 }

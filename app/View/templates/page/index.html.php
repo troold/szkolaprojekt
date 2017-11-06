@@ -271,7 +271,7 @@
 		        success: function success(response) {
 		        	console.log(response);
 		        	if(response.return == 1)
-		        		window.location="panel,page/index";
+		        		window.location='{$router->makeUrl("panel,page/index")}';
 		        }
 		    });
 		}else{

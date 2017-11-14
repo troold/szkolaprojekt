@@ -37,7 +37,7 @@ if(isset($_SERVER['REMOTE_ADDR']) AND ($_SERVER['REMOTE_ADDR'] == '127.0.0.1' OR
 
 
 # Database configuration
-define('DB_HOST', "v2.citycore.pro"); # Database Host (localhost)
-define('DB_USER', "jkubikct_troold"); # Database Username
-define('DB_PASS', "9zL[a_UD#hy]"); # Database Password
-define('DB_DATABASE', "jkubikct_projekt"); # Databese Name
+define('DB_HOST', "###"); # Database Host (localhost)
+define('DB_USER', "###"); # Database Username
+define('DB_PASS', "###"); # Database Password
+define('DB_DATABASE', "###"); # Databese Name

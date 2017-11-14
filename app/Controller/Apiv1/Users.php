@@ -91,9 +91,10 @@ class UsersController extends Controller {
     public function updateScore() {
         $userModel = $this->loadModel('Users');
         $view = $this->loadView('Index');
+        $userId = $_SESSION['id'];
 
         if(isset($_POST) AND !empty($_POST)){
-            $return = $userModel->updateScore($_POST['score']);
+            $return = $userModel->updateScore($userId, $_POST['score']);
 
             if($return['return'] == true){
                 return $view->renderJSON(array('return' => '1'));

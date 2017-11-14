@@ -77,17 +77,11 @@ class UsersModel extends \Model\Model
         
     }
 
-    public function updateScore($score){
-        $dataArray = array('points'=>$score);
-        $userId = $_SESSION['id'];
-        $where = array('user_id' => $userId);
-        $update = $this->baseClass->db->update('users', $dataArray, $where)->affectedRows();
+    public function updateScore($userId, $score){
+        $affectedRows = $this->baseClass->db->pdoQuery('UPDATE users SET points = points + ? WHERE id = ?', array($score, $userId))->affectedRows();
 
-        if(isset($dataArray)){
-            $update = $this->baseClass->db->insert('users', $dataArray)->getLastInsertId();
-            return $this->methodResult(true, $dataArray);         
-        }else{
-            return $this->methodResult(false, array('response' => 'Wystąpił błąd!'));     
+        if($affectedRows >= 0){
+            return $this->methodResult(true);
         }
 
         return $this->methodResult(false, array('response' => 'Error'));

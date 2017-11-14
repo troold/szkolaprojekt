@@ -1,4 +1,4 @@
-{include file="Panel/header.html.php"}
+{include file="panel/header.html.php"}
 
 
 <div class="content-wrapper">
@@ -77,4 +77,4 @@
 	}
 </script>
 
-{include file="Panel/footer.html.php"}
+{include file="panel/footer.html.php"}

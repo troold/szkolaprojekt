@@ -10,7 +10,12 @@ class UsersModel extends \Model\Model
 
     public function login($login, $password){
 
-        $row = $this->baseClass->db->pdoQuery('SELECT * FROM users WHERE login = ? AND (password = ? OR password = ?)', array($login, md5($password.SALT), md5($password)))->result();
+        //$row = $this->baseClass->db->pdoQuery('SELECT * FROM users WHERE login = ? AND (password = ? OR password = ?)', array($login, md5($password.SALT), md5($password)))->result();
+
+        $query = $this->baseClass->db->prepareQuery('SELECT * FROM users WHERE login = ? AND (password = ? OR password = ?)');
+        $query->prepareParms(array($login, md5($password.SALT), md5($password)));
+
+        $row = $this->baseClass->db->pdoQuery($query->getQuery(),$query->getParams())->result();
 
         if(isset($row['user_id']))          
             return $this->methodResult(true, $row);        
@@ -78,7 +83,7 @@ class UsersModel extends \Model\Model
     }
 
     public function updateScore($userId, $score){
-        $affectedRows = $this->baseClass->db->pdoQuery('UPDATE users SET points = points + ? WHERE id = ?', array($score, $userId))->affectedRows();
+        $affectedRows = $this->baseClass->db->pdoQuery('UPDATE users SET points = points + ? WHERE user_id = ?', array($score, $userId))->affectedRows();
 
         if($affectedRows >= 0){
             return $this->methodResult(true);

@@ -24,7 +24,7 @@ class UsersController extends Controller {
                return $view->renderJSON(array('return' => '1'));
                
             }elseif($return['return'] == false AND isset($return['response'])){
-                return $view->renderJSON(array('return' => '0', 'response' => 'wystapil bład'));
+                return $view->renderJSON(array('return' => '0', 'response' => $return['response']));
             }
 
         } 

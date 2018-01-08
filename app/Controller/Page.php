@@ -30,7 +30,7 @@ class PageController extends Controller
     public function index() {
         $view = $this->loadView('Index');
 
-        $view->assign('contents', 'Example assign');
+        //$view->assign('contents', 'Example assign');
         return $view->render('page/index');
 
     }

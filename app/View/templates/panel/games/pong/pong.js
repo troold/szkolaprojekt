@@ -17,7 +17,7 @@ var keysDown = {};
 var dMultiplier = 1;
 var cpuScore = 0;
 var playerScore = 0;
-var scoreLimit = 20;
+var scoreLimit = 3;
 var timeLimit = 300;
 var timePassed = 0;
 var timer;
@@ -112,7 +112,7 @@ Ball.prototype.render = function() {
 };
 
 var update = function() {
-  if((timePassed<timeLimit) && (playerScore <= scoreLimit) && (cpuScore <= scoreLimit)){
+  if((timePassed<timeLimit) && (playerScore < scoreLimit) && (cpuScore < scoreLimit)){
     player.update();
     computer.update(ball);
     ball.update(player.paddle, computer.paddle);
@@ -134,8 +134,7 @@ var update = function() {
           console.log(response);
           if(response.return){
             var userData = response.response;
-            var baseScore = parseInt(userData.points);
-            var submitScore = parseInt(baseScore+(playerScore*dMultiplier));
+            var submitScore = parseInt(playerScore*dMultiplier);
             $.ajax({
               url: '{$router->makeUrl("apiv1,users/updateScore")}',
               type: "POST",

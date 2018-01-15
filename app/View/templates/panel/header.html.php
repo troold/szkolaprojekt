@@ -9,8 +9,6 @@
 
   <script src='{$router->publicWeb("bower_components/jquery/dist/jquery.min.js")}'></script>
   <script type="text/javascript">{include file='userdata.js'}</script>
-  
-  
 
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href='{$router->publicWeb("bower_components/bootstrap/dist/css/bootstrap.min.css")}'>

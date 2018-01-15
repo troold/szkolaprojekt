@@ -113,7 +113,9 @@ html, body{
 }
 
 .submit-field{
-	justify-content: flex-end;
+	position: absolute;
+    bottom: 5px;
+    right: 5px;
 }
 
 .submit-field .submit-button{
@@ -142,7 +144,29 @@ html, body{
 @media (max-width: 450px){
     .register-form .submit-field{
         position: absolute;
-        left: 75%;
-        top: 85%;
+    }
+}
+
+@media (max-width: 420px){
+    .input-text{
+        width: 30%;
+    }
+
+    .horizontal{
+        display: none;
+    }
+
+    .vertical{
+        display: block;
+        line-height: 22px;
+        font-size: 24px;
+        width: 40px;
+        padding: 15px 0;
+    }
+}
+
+@media (min-width: 421px){
+    .vertical{
+        display: none;
     }
 }

@@ -11,9 +11,9 @@
 						</div>
 						<div class="option-list">
 							<ol class="--list">
-								<ul><a href="../panel,users/pong">Pong</a></ul>
-								<ul><a href="#">Clicker</a></ul>
-								<ul><a href="#">Matcher</a></ul>
+								<ul><a href="../panel,games/pong">Pong</a></ul>
+								<ul><a href="../panel,games/clicker">Clicker</a></ul>
+								<ul><a href="../panel,games/matcher">Matcher</a></ul>
 							</ol>
 						</div>
 					</div>

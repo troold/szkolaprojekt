@@ -53,14 +53,15 @@
 								<div class="input-data"><input id="townField" type="text" name="town" class="register-credentials" placeholder="Miasto zamieszkania"></div>
 							</div>
 							<div class="submit-field" style="display: none">
-								<button class="submit-button" data-type="register">Zarejestruj</button>
+								<button class="submit-button horizontal" data-type="register">Zarejestruj</button>
+								<button class="submit-button vertical" data-type="register">Z<br/>a<br/>r<br/>e<br/>j<br/>e<br/>s<br/>t<br/>r<br/>u<br/>j</button>
 							</div>
 						</div>
 						<div class="option btn information">
 							<span class="option-title">Informacje</span>
 						</div>
 						<div id="slideInfo" class="col-xs-12 option-list information-content">
-							<span class="content" style="display: none">Strona została przygotowana przez studenta Jakuba Kubika w&nbsp;ramach zadanego projektu.</span>
+							<span class="info-text" style="display: none">Strona została przygotowana przez studenta Jakuba Kubika w&nbsp;ramach zadanego projektu.</span>
 						</div>
 					</div>
 				</div>
@@ -164,7 +165,7 @@
 		    	height: '+=325'
 		    },500, function(){
 		    	$(target).find('.input-field').css('display', 'flex');
-    			$(target).find('.submit-field').css('display', 'flex');
+    			$(target).find('.submit-field').css('display', 'block');
 	    		animateRunning = false;
 	    		registerFormOpened = true;
 	    	});
@@ -186,12 +187,12 @@
 			$('#slideInfo').animate({
 				height: '+=120'
 			}, 500, function(){
-				$(target).find('.content').css('display', 'flex');
+				$(target).find('.info-text').css('display', 'flex');
 				animateRunning = false;
 				informationOpened = true;
 			});
 		}else{
-			$(target).find('.content').css('display', 'none');
+			$(target).find('.info-text').css('display', 'none');
 			$('#slideInfo').animate({
 				height: '-=120'
 			}, 500, function(){				

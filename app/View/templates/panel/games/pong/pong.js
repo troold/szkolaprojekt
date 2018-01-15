@@ -17,7 +17,7 @@ var keysDown = {};
 var dMultiplier = 1;
 var cpuScore = 0;
 var playerScore = 0;
-var scoreLimit = 3;
+var scoreLimit = 20;
 var timeLimit = 300;
 var timePassed = 0;
 var timer;

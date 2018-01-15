@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	console.log('test')
 	$.ajax({
 	    url: '{$router->publicWeb("apiv1,panel,users/one")}',
 	    type: "GET",

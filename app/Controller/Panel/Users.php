@@ -17,9 +17,4 @@ class UsersController extends \Controller\AbstractPanel {
         $view = $this->loadView('Index');
 		return Response::create($view->fetch('panel/user/one'));
     }
-
-    public function pong(){
-        $view = $this->loadView('Index');
-		return Response::create($view->fetch('panel/games/pong'));
-    }
 }
